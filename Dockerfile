@@ -6,4 +6,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 RUN python manage.py migrate --no-input
 EXPOSE 8000
-CMD ["gunicorn", "taskflow.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "productos_api.wsgi:application", "--bind", "0.0.0.0:8000"]
