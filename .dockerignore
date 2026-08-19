@@ -4,3 +4,7 @@ __pycache__/
 .git
 #Sacamos del docker ignore el archivo de la base de datos para que no se suba al contenedor y se pueda crear una nueva base de datos al iniciar el contenedor
 #db.sqlite3
+
+
+
+

@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Infraestructura Productos Api - repositorio de imágenes ECR
+
+Resources:
+  ProductosRepo:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: productos_api
+      ImageScanningConfiguration:
+        ScanOnPush: true
+
+Outputs:
+  RepositoryUri:
+    Description: URI del repositorio ECR
+    Value: !GetAtt ProductosRepo.RepositoryUri
