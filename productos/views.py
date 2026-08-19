@@ -2,6 +2,7 @@ from rest_framework import viewsets, status, filters
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
+from rest_framework.decorators import api_view
 from django.db import models
 from django.db import connection
 from django.db.utils import OperationalError
@@ -76,8 +77,18 @@ class ProductoViewSet(viewsets.ModelViewSet):
         return queryset
 
     # =============================================
+    # ENDPOINTS DE VERSION
+    # =============================================
+    @api_view(['GET'])
+    def version(request):
+        return Response({'Version':'1.0'})
+
+
+    # =============================================
     # ENDPOINTS DE SALUD
     # =============================================
+
+
 
     @action(detail=False, methods=['get'], url_path='health')
     def health_check(self, request):
