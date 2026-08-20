@@ -17,7 +17,7 @@
         "ecr:CompleteLayerUpload",
         "ecr:PutImage"
       ],
-      "Resource": "arn:aws:ecr:us-east-1:ACCOUNT_ID:repository/productos_api"
+      "Resource": "arn:aws:ecr:us-east-1:938379788431:repository/productos_api"
     }
   ]
 }
