@@ -2,8 +2,9 @@
   "Version": "2012-10-17",
   "Statement": [
     {
+      "Sid": "AllowAccessInfrastructureForECSExpressServices",
       "Effect": "Allow",
-      "Principal": { "Service": "ecs-tasks.amazonaws.com" },
+      "Principal": { "Service": "ecs.amazonaws.com" },
       "Action": "sts:AssumeRole"
     }
   ]
